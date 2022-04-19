@@ -35,14 +35,14 @@ Problem::Solution::Solution( Problem *p, vector<int> &init ){
     content = init;
 }
 
-Problem::Solution::weight(){
+int Problem::Solution::weight(){
     int wght(0);
     for(int k=0; k<problem->n; k++)
         wght += ((*problem)[k]).w * content[k];
     return wght;
 }
 
-Problem::Solution::value(){
+int Problem::Solution::value(){
     int val(0);
     for(int k=0; k<problem->n; k++)
         val += ((*problem)[k]).val * content[k];
