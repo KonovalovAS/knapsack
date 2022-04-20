@@ -71,4 +71,21 @@ int Problem::Solution_weight(){
     return sol_weight;
 }
 
+//
 
+void read_and_solve(){
+    int n,K;
+    cin>>n>>K;
+    vector<Problem::item> I(0);
+    for(int i=0; i<n; i++){
+        int w,v;
+        cin>>v>>w;
+        I.push_back( Problem::item(w,v) );
+    }
+
+    Problem P(K,I);
+    P.Solve();
+
+    cout << P.Solution_value() << endl;
+    P.show_taken();
+}

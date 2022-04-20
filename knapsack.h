@@ -4,6 +4,8 @@
 
 using namespace std;
 
+void read_and_solve();
+
 class Problem{
 public:
     struct item{
